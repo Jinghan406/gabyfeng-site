@@ -496,6 +496,11 @@ h1,h2,h3,p{margin:0;font-weight:400}
 .xr{color:var(--sub)}
 .xi p{margin:5px 0 0;color:var(--sub);font-size:13px;line-height:1.55;max-width:60ch}
 @media (max-width:760px){.ab-top{grid-template-columns:minmax(0,1fr)}.ab-photo{max-width:420px}.dl{grid-template-columns:minmax(0,1fr)}.dl dd{border-top:0;padding-top:0}.xr span{display:none}}
+.feat:has(> .vid.fl){grid-template-columns:minmax(0,1fr);gap:clamp(20px,2.6vw,32px);align-items:start}
+.feat:has(> .vid.fl) .ft{order:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:end}
+.feat:has(> .vid.fl) .ft .n,.feat:has(> .vid.fl) .ft h3{grid-column:1}
+.feat:has(> .vid.fl) .ft p{grid-column:2;grid-row:1 / span 2;align-self:end;margin:0}
+@media (max-width:760px){.feat:has(> .vid.fl) .ft{grid-template-columns:minmax(0,1fr)}.feat:has(> .vid.fl) .ft p{grid-column:1;grid-row:auto}}
 </style>
 
 <div id="app"></div>
