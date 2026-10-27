@@ -820,7 +820,7 @@ const VCACHE={};function vfix(root){(root||document).querySelectorAll("video").f
 function procInit(root){const tl=root.querySelector(".tl[role=tablist]"),tr=root.querySelector(".ptrack");if(!tl||!tr)return;const row=tr.querySelector(".prow"),tabs=[...tl.querySelectorAll("[data-pi]")],th=tl.querySelector(".tl-thumb"),N=tabs.length;let pos=0;
  const clamp=v=>Math.max(0,Math.min(N-1,v));
  const paint=v=>{row.style.transform=`translateX(calc(${-v} * (100% + 24px)))`;th.style.transform=`translateX(${v*100}%)`;const i=Math.round(v);tabs.forEach((t,k)=>{t.classList.toggle("hi",k===i);t.setAttribute("aria-selected",k===i)})};
- const panels=[...row.children];const fitH=()=>{tr.style.height=panels[pos].offsetHeight+"px"};const goTo=i=>{pos=clamp(Math.round(i));paint(pos);fitH()};const ro=new ResizeObserver(fitH);ro.observe(tr);panels.forEach(p=>ro.observe(p));cleanups.push(()=>ro.disconnect());
+ const panels=[...row.children];const fitH=()=>{tr.style.height=panels[pos].offsetHeight+"px"};const goTo=i=>{pos=clamp(Math.round(i));paint(pos);fitH()};const ro=new ResizeObserver(fitH);ro.observe(tr);panels.forEach(p=>ro.observe(p));row.querySelectorAll("img").forEach(im=>im.addEventListener("load",fitH));[300,1000,2500,5000].forEach(t=>setTimeout(fitH,t));cleanups.push(()=>ro.disconnect());
  tabs.forEach((t,k)=>t.addEventListener("click",()=>{if(tl._moved)return;goTo(k)}));
  tl.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){goTo(pos+1);tabs[pos].focus()}if(e.key==="ArrowLeft"){goTo(pos-1);tabs[pos].focus()}});
  const drag=(el,toPos)=>{let down=false,x0=0,p0=0,id=null;
