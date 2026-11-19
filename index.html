@@ -510,6 +510,104 @@ h1,h2,h3,p{margin:0;font-weight:400}
 @media (max-width:760px){.feat:has(> .vid.fl) .ft{grid-template-columns:minmax(0,1fr)}.feat:has(> .vid.fl) .ft p{grid-column:1;grid-row:auto}}
 .back{color:var(--ink);font-size:14px;font-weight:500;padding:9px 16px 9px 12px;border-radius:999px;background:var(--tile);border:1px solid var(--line);align-self:start;justify-self:start;width:max-content;transition:background .2s,transform .2s}
 .back:hover{color:var(--ink);background:var(--line);transform:translateX(-2px)}
+
+/* Aether case */
+.ae{--ae:#1f78de;--aeL:#ebf3fd;--rose:#c4636e;--roseL:#f8eef0}
+:root[data-theme="dark"] .ae{--ae:#5aa5ff;--aeL:#10213a;--rose:#e0848e;--roseL:#2a1a1d}
+.ae .pill.ae-p{background:var(--aeL);color:var(--ae)}
+.ae .ae-shot{border-radius:20px;overflow:hidden;background:var(--tile)}
+.ae .ae-shot img{width:100%;height:auto;display:block}
+.ae .blk-h .n{color:var(--ae)}
+.ae-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ae-stat{border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.ae-stat small{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em}
+.ae-stat b{font-size:clamp(26px,2.8vw,34px);font-weight:500;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.ae-stat p{font-size:14px;line-height:1.6;color:var(--sub)}
+.ae-bars{display:grid;gap:8px;font-size:12px;color:var(--sub)}
+.ae-bar{display:grid;grid-template-columns:84px minmax(0,1fr) 62px;gap:10px;align-items:center}
+.ae-bar i{display:block;height:7px;border-radius:9px;background:var(--line);position:relative;overflow:hidden}
+.ae-bar i::after{content:"";position:absolute;inset:0 auto 0 var(--l,0%);width:var(--w);background:var(--c,var(--rose));border-radius:9px}
+.ae-bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ae-why2{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:14px;margin-top:14px}
+.ae-chart{background:var(--tile);border-radius:18px;padding:22px 22px 16px;display:grid;gap:12px;min-width:0}
+.ae-chart h3{font-size:15px;font-weight:500}
+.ae-chart svg{width:100%;height:auto;overflow:visible}
+.ae-chart text{fill:var(--sub);font-family:var(--font);font-size:11px}
+.ae-quote{background:var(--roseL);border-radius:18px;padding:26px;display:grid;gap:14px;align-content:space-between;margin:0}
+.ae-quote blockquote{margin:0;font-size:clamp(17px,1.7vw,20px);line-height:1.45;letter-spacing:-.01em}
+.ae-quote figcaption{font-size:12px;color:var(--sub)}
+.ae-feats{display:grid;gap:clamp(48px,6vw,80px)}
+.ae-row{display:grid;gap:clamp(16px,2.2vw,24px)}
+.ae-ft{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end}
+.ae-ft .n{color:var(--ae);margin-bottom:8px}
+.ae-ft h3{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.025em;line-height:1.2}
+.ae-ft p{font-size:15px;line-height:1.65;color:var(--sub)}
+.ae-ft ul{padding:0;margin:10px 0 0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.ae-ft li{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--tile);color:var(--sub)}
+.ae-ss{display:grid;gap:12px}
+.ae-ssv{overflow:hidden;border-radius:18px;background:var(--tile);touch-action:pan-y;cursor:grab}
+.ae-ss.one .ae-ssv{cursor:default}
+.ae-ssv.drag{cursor:grabbing}
+.ae-ssr{display:flex;transition:transform .7s var(--ease);will-change:transform}
+.ae-ssv.drag .ae-ssr{transition:none}
+.ae-sl{flex:0 0 100%;min-width:0;position:relative;margin:0}
+.ae-sl>button{display:block;width:100%;padding:0;cursor:zoom-in}
+.ae-sl img{width:100%;height:auto;display:block;-webkit-user-drag:none;user-select:none}
+.ae-sl figcaption{position:absolute;left:12px;bottom:10px;font-size:11.5px;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--bg) 82%,transparent);color:var(--ink);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);pointer-events:none}
+.ae-ss.one .ae-sl figcaption{display:none}
+.ae-ssc{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:12px;align-items:center}
+.ae-ssb{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:14px;color:var(--ink);transition:background .2s}
+.ae-ssb:hover{background:var(--tile)}
+.ae-ssb[data-step="1"]{order:4}
+.ae-segs{display:grid;gap:6px}
+.ae-seg{height:14px;display:grid;align-items:center;padding:0}
+.ae-seg::before{content:"";grid-area:1/1;height:3px;border-radius:3px;background:var(--line)}
+.ae-seg b{grid-area:1/1;height:3px;width:0;border-radius:3px;background:var(--ae);justify-self:start}
+.ae-cnt{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums;min-width:3.2em;text-align:right}
+.ae-dev{display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:20px;align-items:center;padding:20px 22px;border-radius:18px;border:1px solid var(--line);margin-top:clamp(40px,5vw,64px)}
+.ae-dev p{font-size:14px;color:var(--sub);max-width:16ch}
+.ae-dev figure{margin:0;display:grid;gap:8px;justify-items:center;font-size:12.5px}
+.ae-dev img{height:64px;width:auto;object-fit:contain}
+.ae .tl[role=tablist]{grid-template-columns:repeat(5,minmax(0,1fr))}
+.ae .tl-thumb{width:20%;background:var(--ae)}
+.ae .tl button.hi span{color:var(--ae)}
+.ae .pp-h .k{color:var(--ae)}
+.ae-q2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ae-q{margin:0;border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:8px;background:var(--bg)}
+.ae-q p{font-size:14.5px;line-height:1.5}
+.ae-q small{font-size:12px;color:var(--sub)}
+.ae-need{background:var(--bg);border-radius:16px;padding:18px;display:grid;gap:8px}
+.ae-need small{font-size:11.5px;color:var(--sub)}
+.ae-need b{font-size:15px;font-weight:500}
+.ae-need p{font-size:13.5px;color:var(--sub);line-height:1.55}
+.ae-need ul,.ae-ideas ul{padding:0;margin:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.ae-need li{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--tile);color:var(--sub)}
+.ae-mood{background:var(--bg);border-radius:16px;padding:18px 18px 12px;display:grid;gap:8px}
+.ae-mood-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline;font-size:14px}
+.ae-mood-h b{font-weight:500}
+.ae-key{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--sub)}
+.ae-key i{width:56px;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--rose),var(--ae))}
+.ae-mood-s{overflow-x:auto}
+.ae-mood svg{width:100%;min-width:560px;height:auto;overflow:visible}
+.ae-mood text{font-family:var(--font);font-size:9px;fill:var(--sub)}
+.ae-mood text.e{fill:var(--ink);font-weight:500}
+.ae-ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ae-idea{background:var(--bg);border-radius:14px;padding:16px;display:grid;gap:6px;align-content:start}
+.ae-idea small{font-size:10.5px;color:var(--ae);text-transform:uppercase;letter-spacing:.08em}
+.ae-idea b{font-size:13.5px;font-weight:500}
+.ae-idea p{font-size:12.5px;color:var(--sub);line-height:1.5}
+.ae-round{display:grid;gap:6px}
+.ae-round b{font-size:13.5px;font-weight:500}
+.ae-round p{font-size:13px;color:var(--sub);line-height:1.55}
+.ae-learn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,4vw,48px)}
+.ae-learn>div{display:grid;gap:12px;align-content:start}
+.ae-learn .n{color:var(--ae)}
+.ae-learn p{font-size:15px;line-height:1.65;color:var(--sub)}
+.ae-frames{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ae-frames .pfig>button{border-radius:12px}
+@media (max-width:1100px){.ae-stats,.ae-ideas{grid-template-columns:minmax(0,1fr)}.ae-why2,.ae-ft,.ae-learn,.ae-q2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.ae-dev{grid-template-columns:repeat(3,minmax(0,1fr))}.ae-dev p{grid-column:1/-1;max-width:none}.ae-dev img{height:48px}.ae-sl figcaption{font-size:10.5px;left:8px;bottom:6px}.ae .tl button{font-size:10px}}
+@media (prefers-reduced-motion:reduce){.ae-ssr{transition:none}}
 </style>
 
 <div id="app"></div>
@@ -546,7 +644,7 @@ const LINKEDIN="https://www.linkedin.com/in/jinghanfeng";
 const CASES=[
  {id:"h24",name:"24 Hour Home Care",desc:"An app for families caring for someone with a disability: see hours left, plan the week, change visits",ctx:"ArtCenter Sponsored Studio",year:"2026",img:IMG.c_24h,page:"case-h24",vid:"h_all.mp4",poster:IMG.pf1},
  {id:"kami",name:"Kami",desc:"An AI co-pilot that takes product designers from research to hi‑fi in one conversation",ctx:"AI product · Team of 3",year:"2025",img:IMG.c_kami,page:"case-kami",vid:VID.research},
- {id:"ath",name:"Atheria",desc:"An AR rehab game that turns stroke therapy in hospitals into play",ctx:"AR · Healthcare",year:"2024",img:IMG.c_ath},
+ {id:"ath",name:"Aether",desc:"An AR rehab game that turns stroke therapy in hospitals into play",ctx:"AR · Healthcare",year:"2024",img:"p/ath/cover.webp",page:"case-ath"},
  {id:"rom",name:"Roamary",desc:"An AI travel planner",ctx:"AI product",year:"2025",img:IMG.c_roam},
  {id:"new",name:"New project",desc:"Coming soon",ctx:"",year:"",soon:true}
 ];
@@ -599,6 +697,7 @@ const pimg=(src,cap,w)=>`<figure class="pfig ${w?"w":""}"><button type="button" 
 const phone=(src,alt)=>`<div class="phone"><img src="${src}" alt="${alt}"></div>`;
 
 const CSIDX={"case-h24":{t:"24 Hour Home Care",m:"ArtCenter Sponsored Studio · 2026",idx:[["c-ov","Overview"],["c-app","The app"],["c-mine","My part"],["c-brand","Brand"],["c-proc","Process"],["c-fb","Feedback"]]},
+ "case-ath":{t:"Aether",m:"AR stroke rehab · 2024",idx:[["a-ov","Overview"],["a-res","Research"],["a-app","The product"],["a-proc","Process"],["a-learn","Learnings"]]},
  "case-kami":{t:"Kami",m:"AI design co-pilot · 2025",idx:[["k-ov","Overview"],["k-app","The product"],["k-res","Research"],["k-proc","Process"],["k-learn","Learnings"]]}};
 function side(){
  if(CSIDX[P]){
@@ -734,6 +833,129 @@ function caseH24(){return `<article class="cs">
 </article>`}
 
 const KPROMPT=(t)=>`<div class="kp"><p>${t}</p></div>`;
+const AE="p/ath/";
+const aeSS=list=>{const sl=list.map(([k,c])=>`<figure class="ae-sl"><button type="button" data-zoom="${c}"><img src="${AE}${k}.webp" alt="${c}" draggable="false"></button><figcaption>${c}</figcaption></figure>`).join("");
+ if(list.length<2)return `<div class="ae-ss one"><div class="ae-ssv"><div class="ae-ssr">${sl}</div></div></div>`;
+ return `<div class="ae-ss" aria-roledescription="carousel"><div class="ae-ssv"><div class="ae-ssr">${sl}</div></div><div class="ae-ssc"><button class="ae-ssb" type="button" data-step="-1" aria-label="Previous screen">←</button><div class="ae-segs" style="grid-template-columns:repeat(${list.length},minmax(0,1fr))">${list.map(([k,c])=>`<button class="ae-seg" type="button" aria-label="Show ${c}"><b></b></button>`).join("")}</div><span class="ae-cnt">1 / ${list.length}</span><button class="ae-ssb" type="button" data-step="1" aria-label="Next screen">→</button></div></div>`};
+const aeFeat=(n,t,d,chips,list)=>`<div class="ae-row"><div class="ae-ft"><div><span class="n">${n}</span><h3>${t}</h3></div><div><p>${d}</p>${chips?`<ul>${chips.map(c=>`<li>${c}</li>`).join("")}</ul>`:""}</div></div>${aeSS(list)}</div>`;
+function caseAth(){return `<article class="cs ae">
+ <header class="cs-hero">
+  <div class="pills"><span class="pill ae-p">AR · Healthcare</span><span class="pill">Hospitals + stroke patients</span><span class="pill">Solo project</span></div>
+  <h1 class="cs-h1">Aether</h1>
+  <p class="lead">An AR rehab game platform for stroke patients, used in hospitals with staff guiding every session.</p>
+  <div class="meta"><div><span>My role</span>UX/UI design<br>Product design<br>Prototyping</div><div><span>Timeline</span>14 weeks<br>May – Aug 2024</div><div><span>Tools</span>Figma<br>Midjourney<br>Jimeng AI</div><div><span>Platform</span>AR headsets in the<br>hospital rehab room</div></div>
+ </header>
+ <div class="ae-shot"><img src="${AE}hero.webp" alt="A patient wearing an AR headset stacks virtual stones in a forest game, with a ranking panel and progress bar floating in the hospital room"></div>
+
+ <section class="ov sec" id="a-ov" data-id="a-ov">
+  <div class="ov-top"><span>Overview</span><p>Stroke rehab only works if patients keep coming back, and most find the repeated exercises dull. Aether turns the same movements into short AR games, played in the hospital with staff nearby.</p></div>
+  <div class="cards3">
+   <div class="card" style="--dot:var(--sub)"><h3>Before</h3><p>Patients repeat simple arm and balance exercises at home or in the clinic. Progress is hard to see, and many lose motivation.</p></div>
+   <div class="card" style="--dot:var(--ae)"><h3>With Aether</h3><p>Staff fit the headset and pick a game. Patients stack stones, climb or catch fruit, and see their score and progress after every session.</p></div>
+   <div class="card" style="--dot:var(--rose)"><h3>My part</h3><p>I did the research and interviews, defined the personas and journey, designed the AR interface and game concepts, and tested paper prototypes.</p></div>
+  </div>
+ </section>
+
+ <section class="sec" id="a-res" data-id="a-res" style="gap:0">
+  <div class="blk-h"><div><span class="n">Research</span><h2>Why patients struggle with rehab</h2></div><p>In ischemic stroke, depression, anxiety and sleep problems are common. They make months of rehab even harder to keep up.</p></div>
+  <div class="ae-stats">
+   <div class="ae-stat"><small>Depression</small><b>15.8–55%</b><p>of stroke patients, compared with about 6% of the general population.</p><div class="ae-bars"><div class="ae-bar"><span>General</span><i style="--w:6%;--c:var(--sub)"></i><em>~6%</em></div><div class="ae-bar"><span>Post-stroke</span><i style="--l:15.8%;--w:39.2%"></i><em>15.8–55%</em></div></div></div>
+   <div class="ae-stat"><small>Anxiety</small><b>18–24%</b><p>of stroke patients. A narrower range than depression, and consistent across studies.</p><div class="ae-bars"><div class="ae-bar"><span>Low estimate</span><i style="--w:18%"></i><em>18%</em></div><div class="ae-bar"><span>High estimate</span><i style="--w:24%"></i><em>24%</em></div></div></div>
+   <div class="ae-stat"><small>Sleep</small><b>Up to 70%</b><p>have sleep-disordered breathing. Sleep–wake disorders affect 10–50%.</p><div class="ae-bars"><div class="ae-bar"><span>Breathing</span><i style="--l:50%;--w:20%;--c:var(--ae)"></i><em>50–70%</em></div><div class="ae-bar"><span>Sleep–wake</span><i style="--l:10%;--w:40%"></i><em>10–50%</em></div></div></div>
+  </div>
+  <div class="ae-why2">
+   <div class="ae-chart"><h3>Demand for rehab peaks at age 60–79</h3>
+    <svg viewBox="0 0 520 220" role="img" aria-label="Demand for rehabilitation by age group: 0–19 about 5%, 20–39 about 15%, 40–59 about 25%, 60–79 about 35%, 80 and over about 20%"><g stroke="var(--line)" stroke-width="1"><line x1="34" y1="16" x2="512" y2="16"/><line x1="34" y1="58" x2="512" y2="58"/><line x1="34" y1="100" x2="512" y2="100"/><line x1="34" y1="142" x2="512" y2="142"/><line x1="34" y1="184" x2="512" y2="184"/></g><g text-anchor="end"><text x="26" y="20">40%</text><text x="26" y="62">30</text><text x="26" y="104">20</text><text x="26" y="146">10</text><text x="26" y="188">0</text></g><g fill="var(--line)"><rect x="60" y="163" width="56" height="21" rx="10"/><rect x="152" y="121" width="56" height="63" rx="12"/><rect x="244" y="79" width="56" height="105" rx="14"/><rect x="428" y="100" width="56" height="84" rx="14"/></g><rect x="336" y="37" width="56" height="147" rx="14" fill="var(--ae)"/><g text-anchor="middle"><text x="88" y="206">0–19</text><text x="180" y="206">20–39</text><text x="272" y="206">40–59</text><text x="364" y="206" style="fill:var(--ink)">60–79</text><text x="456" y="206">80+</text></g></svg></div>
+   <figure class="ae-quote"><blockquote>“Traditional repetitive rehab is dull and boring, and it is hard to stay interested. But a patient’s motivation is often what makes treatment work.”</blockquote><figcaption>What patients told me, summarized from interviews</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="sec" id="a-app" data-id="a-app" style="gap:0">
+  <div class="blk-h"><div><span class="n">The product</span><h2>Inside Aether</h2></div><p>A session follows the hospital routine: check in, choose a game, play with a clear goal, then review the results with staff.</p></div>
+  <div class="ae-feats">
+   ${aeFeat("01","Dashboard","Recently played games and the doctors on duty, so patients and staff can start in one tap.",null,[["s_dashboard","Dashboard"]])}
+   ${aeFeat("02","Games by recovery goal","Every game is tagged by the body area it trains, the position and the level, so staff can match it to each patient’s plan.",["Upper limb","Balance &amp; lower limb","Cognitive / memory","Daily living"],[["s_category","All games, filtered by goal"],["s_preview","Game preview before launch"]])}
+   ${aeFeat("03","Playing a game","Each game has one mission, a timer and a score. A ranking with other patients and a progress bar keep people coming back. Patients can switch between immersive and normal view.",null,[["s_stone_imm","Stone Stacker · immersive"],["s_stone_norm","Stone Stacker · normal view"],["s_climb","Rock climbing · grip strength"],["s_obst_start","Avoid obstacles · start"],["s_obst_play","Avoid obstacles · playing"],["s_obst_norm","Avoid obstacles · normal view"]])}
+   ${aeFeat("04","Health tracking","Medical equipment streams SpO2, heart rate, blood pressure and an ECG. The hospital adds height and weight, so BMI and body measurements stay current.",null,[["s_health","Vital signs and ECG"],["s_body","Body condition and BMI"],["s_chest","Chest measurement"],["s_hip","Hip measurement"],["s_waist","Waist measurement"]])}
+   ${aeFeat("05","Booking a doctor","Patients see their next appointment and join it by video. They can browse doctors by department, then pick a date and time, on their own or with staff.",null,[["s_doc_cat","Upcoming appointment and departments"],["s_doc_list","Available doctors"],["s_date","Pick a date"],["s_date_sel","Date selected"],["s_time_sel","Pick a time"]])}
+  </div>
+  <div class="ae-dev"><p>Works with these headsets</p><figure><img src="${AE}dev_holo.webp" alt="HoloLens 2">HoloLens 2</figure><figure><img src="${AE}dev_quest.webp" alt="Meta Quest 3">Meta Quest 3</figure><figure><img src="${AE}dev_tcl.webp" alt="TCL NxtWear S">TCL NxtWear S</figure></div>
+ </section>
+
+ <section class="sec" id="a-proc" data-id="a-proc" style="gap:0">
+  <div class="blk-h"><div><h2 style="font-size:clamp(28px,3vw,38px)">How I got there</h2></div><p>Interviews and research first, then personas and the journey of one session, game ideas, paper prototypes and three rounds of testing.</p></div>
+  <div class="tl" role="tablist" aria-label="Project process"><i class="tl-thumb" aria-hidden="true"></i>
+   <button type="button" role="tab" data-pi="0" class="hi"><span>Step 1</span>Research</button><button type="button" role="tab" data-pi="1"><span>Step 2</span>Define</button><button type="button" role="tab" data-pi="2"><span>Step 3</span>Ideate</button><button type="button" role="tab" data-pi="3"><span>Step 4</span>Test</button><button type="button" role="tab" data-pi="4"><span>Step 5</span>Final UI</button></div>
+  <p class="tl-hint">Drag the timeline or swipe · tap an image to enlarge</p>
+  <div class="ptrack" aria-label="Process stages"><div class="prow">
+
+   <div class="ppanel" role="tabpanel" aria-label="Research"><div class="pp-h"><span class="k">Step 1 · Research</span><h3>I interviewed two patients, a patient’s daughter and a doctor.</h3></div>
+    <div class="ae-q2">
+     <figure class="ae-q"><p>“There are days when I feel a deep sense of loss and sadness, especially when I think about my career and the social activities I used to enjoy.”</p><small>Patient, 76</small></figure>
+     <figure class="ae-q"><p>“I was working on balance exercises, which have always been difficult for me. It was frustrating and even a bit embarrassing.”</p><small>Patient, 45</small></figure>
+     <figure class="ae-q"><p>“My dad easily becomes angry, and we always need to intervene. Not being able to respond or move freely makes him irritable.”</p><small>Patient’s daughter</small></figure>
+     <figure class="ae-q"><p>“Rehabilitation was not systematic enough. If there were specialized devices to help, it might have helped with training.”</p><small>Doctor</small></figure>
+    </div>
+    <p style="font-size:14px;line-height:1.65;color:var(--sub)">Affinity mapping grouped what I heard into themes: life before the stroke, why rehab matters, and the role of emotions and family support. Patients wanted instant feedback that shows where they are improving.</p>
+    <div class="pimgs">${pimg(AE+"interviews.webp","Interview board","w")}</div></div>
+
+   <div class="ppanel" role="tabpanel" aria-label="Define"><div class="pp-h"><span class="k">Step 2 · Define</span><h3>Designing for the hospital and the patient</h3></div>
+    <div class="ae-q2">
+     <div class="ae-need"><small>Buyer · Hospital</small><b>Cedars-Sinai, Los Angeles</b><p>A large, well-staffed rehab team with a clear daily schedule and modern equipment.</p><ul><li>Increase engagement</li><li>Improve outcomes</li><li>Track progress</li><li>Reduce therapist workload</li><li>Standardize</li><li>Support remote recovery</li></ul></div>
+     <div class="ae-need"><small>User · Stroke patient</small><b>Karl Stevenson, 76</b><p>Retired accountant. Ischemic stroke eight months ago, now in physical therapy at the hospital.</p><ul><li>Game-like experience</li><li>Real-time guidance</li><li>Daily plan clarity</li><li>Progress visibility</li><li>Safe intensity</li><li>Clear goals</li></ul></div>
+    </div>
+    <div class="ae-mood"><div class="ae-mood-h"><b>How Karl feels during one session</b><span class="ae-key">Worried<i></i>Motivated</span></div>
+     <div class="ae-mood-s"><svg viewBox="0 0 700 150" role="img" aria-label="Mood across seven stages: neutral at check-in, nervous at the assessment, uncertain during setup, curious at calibration, engaged during training, encouraged at feedback, motivated at the end"><defs><linearGradient id="ae-mg" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="16"><stop offset="0" stop-color="var(--rose)"/><stop offset="1" stop-color="var(--ae)"/></linearGradient></defs><line x1="20" y1="96" x2="680" y2="96" stroke="var(--line)"/><polyline points="50,60 150,88 250,74 350,46 450,22 550,28 650,16" fill="none" stroke="url(#ae-mg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g fill="url(#ae-mg)"><circle cx="50" cy="60" r="5"/><circle cx="150" cy="88" r="5"/><circle cx="250" cy="74" r="5"/><circle cx="350" cy="46" r="5"/><circle cx="450" cy="22" r="5"/><circle cx="550" cy="28" r="5"/><circle cx="650" cy="16" r="5"/></g><g text-anchor="middle"><text class="e" x="50" y="118">Neutral</text><text class="e" x="150" y="118">Nervous</text><text class="e" x="250" y="118">Uncertain</text><text class="e" x="350" y="118">Curious</text><text class="e" x="450" y="118">Engaged</text><text class="e" x="550" y="118">Encouraged</text><text class="e" x="650" y="118">Motivated</text><text x="50" y="136">Check-in</text><text x="150" y="136">Assessment</text><text x="250" y="136">Setup</text><text x="350" y="136">Calibration</text><text x="450" y="136">Training</text><text x="550" y="136">Feedback</text><text x="650" y="136">Complete</text></g></svg></div></div>
+    <div class="pimgs">${pimg(AE+"journey.webp","Journey map: what staff do, what the patient thinks and the pain points at each stage","w")}</div></div>
+
+   <div class="ppanel" role="tabpanel" aria-label="Ideate"><div class="pp-h"><span class="k">Step 3 · Ideate</span><h3>Game ideas based on real therapy exercises</h3></div>
+    <div class="ae-ideas">
+     <div class="ae-idea"><small>Memory / attention</small><b>Schulte grid · Card matching · Target bird</b><p>Find numbers in order, flip and pair cards, spot one bird among distractors.</p></div>
+     <div class="ae-idea"><small>Language</small><b>Flashcards · Conversation</b><p>Sound and motion paired cards, and practice talking with an AI character.</p></div>
+     <div class="ae-idea"><small>Motor / hand–eye</small><b>Mirror game · Balance · Catch &amp; score</b><p>Stack stones, walk virtual bridges, stretch shoulder, elbow and wrist to catch objects.</p></div>
+    </div>
+    <div class="pimgs">${pimg(AE+"storyboard.webp","Storyboard: home exercises feel boring, the hospital offers AR rehab with staff support, and he starts looking forward to training","w")}</div></div>
+
+   <div class="ppanel" role="tabpanel" aria-label="Test"><div class="pp-h"><span class="k">Step 4 · Test</span><h3>Three rounds of paper prototype testing</h3></div>
+    <div class="pimgs">${pimg(AE+"lofi.webp","First lo-fi screens","w")}</div>
+    <div class="ae-ideas">
+     <div class="ae-round">${pimg(AE+"test1.webp","Round 1")}<p>Testers could not get back home or to the previous step, so I added two gestures and fixed confusing page jumps.</p></div>
+     <div class="ae-round">${pimg(AE+"test2.webp","Round 2")}<p>People forgot the new gestures. Stickers on their hands helped them remember. The game sessions were the most engaging part.</p></div>
+     <div class="ae-round">${pimg(AE+"test3.webp","Round 3")}<p>Much smoother. One issue left: too many pop-ups in the progress update flow.</p></div>
+    </div></div>
+
+   <div class="ppanel" role="tabpanel" aria-label="Final UI"><div class="pp-h"><span class="k">Step 5 · Final UI</span><h3>Final interface</h3></div>
+    <p style="font-size:14px;line-height:1.65;color:var(--sub)">Every panel is semi-transparent, so patients still see the room and the staff around them.</p>
+    <div class="pimgs" style="grid-template-columns:repeat(2,minmax(0,1fr))">${pimg(AE+"s_dashboard.webp","Dashboard")}${pimg(AE+"s_category.webp","Game category")}${pimg(AE+"s_health.webp","Health tracking")}${pimg(AE+"s_doc_cat.webp","Doctors")}</div></div>
+
+  </div></div>
+ </section>
+
+ <section class="sec ae-learn" id="a-learn" data-id="a-learn">
+  <div><span class="n">What I learned</span><p>AI video tools can make animations that would take days by hand. To keep every game in one style, I used Midjourney’s style reference. For the transitions, I generated the first and last frame, then let the AI fill the motion between them, which made the results far more predictable.</p>
+   <div class="ae-frames">${pimg(AE+"ai_first.webp","First frame")}${pimg(AE+"ai_last.webp","Last frame")}</div></div>
+  <div><span class="n">Next steps</span><p>Build the interactions in Unity and Reality Composer, so panels can be dragged with hand gestures on real AR glasses, and test with stroke patients in a hospital.</p></div>
+ </section>
+
+ <a class="next" href="#case-h24" data-p="case-h24"><div><small>Next project</small><h3>24 Hour Home Care</h3></div><i>→</i></a>
+</article>`}
+function aeInit(root){if(!root.querySelector(".ae"))return;const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,DUR=4500;
+ root.querySelectorAll(".ae-ss:not(.one)").forEach(ss=>{const view=ss.querySelector(".ae-ssv"),row=ss.querySelector(".ae-ssr"),segs=[...ss.querySelectorAll(".ae-seg")],cnt=ss.querySelector(".ae-cnt"),N=segs.length;
+  let i=0,t=0,last=0,hover=false,seen=false,drag=null,moved=false,alive=true;
+  const paint=x=>{row.style.transform=`translateX(${-x*100}%)`};
+  const go=k=>{i=(k+N)%N;t=0;paint(i);cnt.textContent=(i+1)+" / "+N;segs.forEach((s,j)=>{s.querySelector("b").style.width=j<i?"100%":"0%";s.setAttribute("aria-current",j===i)})};
+  const tick=now=>{if(!alive)return;const dt=last?Math.min(now-last,100):0;last=now;if(!reduce&&!hover&&seen&&!drag&&!document.hidden){t+=dt;if(t>=DUR)go(i+1)}segs[i].querySelector("b").style.width=(reduce?100:Math.min(100,t/DUR*100))+"%";requestAnimationFrame(tick)};
+  segs.forEach((s,j)=>s.addEventListener("click",()=>go(j)));
+  ss.querySelectorAll("[data-step]").forEach(b=>b.addEventListener("click",()=>go(i+ +b.dataset.step)));
+  ss.addEventListener("pointerenter",e=>{if(e.pointerType==="mouse")hover=true});ss.addEventListener("pointerleave",()=>hover=false);
+  ss.addEventListener("focusin",()=>hover=true);ss.addEventListener("focusout",()=>hover=false);
+  const io=new IntersectionObserver(es=>{seen=es[0].isIntersecting},{threshold:.5});io.observe(view);
+  view.addEventListener("pointerdown",e=>{if(e.button>0)return;drag={x:e.clientX,id:e.pointerId};moved=false});
+  view.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-drag.x;if(!moved){if(Math.abs(dx)<6)return;moved=true;view.classList.add("drag");try{view.setPointerCapture(drag.id)}catch(_){}}paint(i-dx/view.clientWidth)});
+  const up=e=>{if(!drag)return;const dx=e.clientX-drag.x;drag=null;view.classList.remove("drag");if(moved)go(Math.abs(dx)>view.clientWidth*.12?i-Math.sign(dx):i)};
+  view.addEventListener("pointerup",up);view.addEventListener("pointercancel",up);
+  view.addEventListener("click",e=>{if(moved){e.stopPropagation();e.preventDefault();moved=false}},true);
+  go(0);requestAnimationFrame(tick);cleanups.push(()=>{alive=false;io.disconnect()})})}
 function caseKami(){return `<article class="cs km">
  <header class="km-hero">
   <p class="km-eye">Kami <span>AI design co-pilot · Team of 3 · 2025</span></p>
@@ -790,7 +1012,7 @@ function caseKami(){return `<article class="cs km">
   <div><span class="km-n">Next steps</span><p>Train Kami on a larger set of UI styles, and connect APIs from other tools into one complete platform.</p></div>
  </section>
 
- <a class="next km-next" href="#case-h24" data-p="case-h24"><div><small>Next project</small><h3>24 Hour Home Care</h3></div><i>→</i></a>
+ <a class="next km-next" href="#case-ath" data-p="case-ath"><div><small>Next project</small><h3>Aether, AR rehab games for stroke patients</h3></div><i>→</i></a>
 </article>`}
 
 /* ---------- behaviour ---------- */
@@ -846,14 +1068,14 @@ function procInit(root){const tl=root.querySelector(".tl[role=tablist]"),tr=root
  paint(0);fitH()}
 function ifix(root){(root||document).querySelectorAll("img").forEach(im=>{const s=im.getAttribute("src")||"";if(!/^p\//.test(s)||im._fx)return;im._fx=1;const fb=()=>{if(im._fb)return;im._fb=1;fetch(s).then(r=>r.blob()).then(b=>{const fr=new FileReader();fr.onload=()=>{im.src=fr.result};fr.readAsDataURL(b)}).catch(()=>{})};im.addEventListener("error",fb);if(im.complete&&!im.naturalWidth)fb()})}
 function go(p){cleanups.forEach(f=>f());cleanups=[];P=p;const app=document.getElementById("app");
- const body={work,play,about,"case-h24":caseH24,"case-kami":caseKami}[p]();
+ const body={work,play,about,"case-h24":caseH24,"case-kami":caseKami,"case-ath":caseAth}[p]();
  app.innerHTML=`<div class="sp">${side()}<main class="main">${body}</main></div>`;
  bind(app);mountDemos(app);
  if(p==="work")spy(".fig,.sec[data-id]",[...app.querySelectorAll(".sub a")]);
- vfix(app);ifix(app);autoVids(app);mountTiles(app);procInit(app);if(CSIDX[p])spy(".cs [data-id]",[...app.querySelectorAll(".cs-index a")]);
+ vfix(app);ifix(app);autoVids(app);mountTiles(app);procInit(app);aeInit(app);if(CSIDX[p])spy(".cs [data-id]",[...app.querySelectorAll(".cs-index a")]);
  window.scrollTo(0,0);try{history.replaceState(null,"","#"+p);localStorage.setItem("gf-page",p)}catch(e){}}
 let theme="light";try{theme=localStorage.getItem("gf-theme")||"light"}catch(e){}document.documentElement.dataset.theme=theme;
-const ok=["work","play","about","case-h24","case-kami"];let start=(location.hash||"").slice(1);
+const ok=["work","play","about","case-h24","case-kami","case-ath"];let start=(location.hash||"").slice(1);
 if(!ok.includes(start)){start="work";try{const s=localStorage.getItem("gf-page");if(ok.includes(s))start=s}catch(e){}}
 go(start);
 </script>
