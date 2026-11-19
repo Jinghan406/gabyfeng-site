@@ -697,7 +697,7 @@ const pimg=(src,cap,w)=>`<figure class="pfig ${w?"w":""}"><button type="button" 
 const phone=(src,alt)=>`<div class="phone"><img src="${src}" alt="${alt}"></div>`;
 
 const CSIDX={"case-h24":{t:"24 Hour Home Care",m:"ArtCenter Sponsored Studio · 2026",idx:[["c-ov","Overview"],["c-app","The app"],["c-mine","My part"],["c-brand","Brand"],["c-proc","Process"],["c-fb","Feedback"]]},
- "case-ath":{t:"Aether",m:"AR stroke rehab · 2024",idx:[["a-ov","Overview"],["a-res","Research"],["a-app","The product"],["a-proc","Process"],["a-learn","Learnings"]]},
+ "case-ath":{t:"Aether",m:"AR stroke rehab · 2024",idx:[["a-ov","Overview"],["a-res","Research"],["a-app","The product"],["a-proc","Process"],["a-learn","Next steps"]]},
  "case-kami":{t:"Kami",m:"AI design co-pilot · 2025",idx:[["k-ov","Overview"],["k-app","The product"],["k-res","Research"],["k-proc","Process"],["k-learn","Learnings"]]}};
 function side(){
  if(CSIDX[P]){
@@ -931,9 +931,7 @@ function caseAth(){return `<article class="cs ae">
   </div></div>
  </section>
 
- <section class="sec ae-learn" id="a-learn" data-id="a-learn">
-  <div><span class="n">What I learned</span><p>AI video tools can make animations that would take days by hand. To keep every game in one style, I used Midjourney’s style reference. For the transitions, I generated the first and last frame, then let the AI fill the motion between them, which made the results far more predictable.</p>
-   <div class="ae-frames">${pimg(AE+"ai_first.webp","First frame")}${pimg(AE+"ai_last.webp","Last frame")}</div></div>
+ <section class="sec ae-learn" id="a-learn" data-id="a-learn" style="grid-template-columns:minmax(0,1fr)">
   <div><span class="n">Next steps</span><p>Build the interactions in Unity and Reality Composer, so panels can be dragged with hand gestures on real AR glasses, and test with stroke patients in a hospital.</p></div>
  </section>
 
