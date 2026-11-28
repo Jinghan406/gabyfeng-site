@@ -608,6 +608,10 @@ h1,h2,h3,p{margin:0;font-weight:400}
 @media (max-width:1100px){.ae-stats,.ae-ideas{grid-template-columns:minmax(0,1fr)}.ae-why2,.ae-ft,.ae-learn,.ae-q2{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.ae-dev{grid-template-columns:repeat(3,minmax(0,1fr))}.ae-dev p{grid-column:1/-1;max-width:none}.ae-dev img{height:48px}.ae-sl figcaption{font-size:10.5px;left:8px;bottom:6px}.ae .tl button{font-size:10px}}
 @media (prefers-reduced-motion:reduce){.ae-ssr{transition:none}}
+#w-ath .cover{aspect-ratio:16/9}
+.ae-shot video{width:100%;height:auto;display:block;aspect-ratio:16/9;background:#000}
+.ae-in{margin:clamp(28px,3.5vw,48px) 0 clamp(36px,4.5vw,64px)}
+.ae-in figcaption{margin-top:12px;font-size:14px;color:var(--sub)}
 </style>
 
 <div id="app"></div>
@@ -642,9 +646,9 @@ const EMAIL="jinghan.design@gmail.com";
 const RESUME="https://drive.google.com/file/d/1GbJpCydifzkirsERXsUSoAH7qi489J3-/view?usp=sharing";
 const LINKEDIN="https://www.linkedin.com/in/jinghanfeng";
 const CASES=[
- {id:"h24",name:"24 Hour Home Care",desc:"An app for families caring for someone with a disability: see hours left, plan the week, change visits",ctx:"ArtCenter Sponsored Studio",year:"2026",img:IMG.c_24h,page:"case-h24",vid:"h_all.mp4",poster:IMG.pf1},
- {id:"kami",name:"Kami",desc:"An AI co-pilot that takes product designers from research to hi‑fi in one conversation",ctx:"AI product · Team of 3",year:"2025",img:IMG.c_kami,page:"case-kami",vid:VID.research},
- {id:"ath",name:"Aether",desc:"An AR rehab game that turns stroke therapy in hospitals into play",ctx:"AR · Healthcare",year:"2024",img:"p/ath/cover.webp",page:"case-ath",vid:"p/ath/ath_vr.mp4",poster:"p/ath/cover.webp"}
+ {id:"h24",name:"24 Hour Home Care",desc:"A client project with 24 Hour Home Care. Families caring for someone with a disability can check care hours left, plan the week with CarePilot and change visits without calling the office.",ctx:"ArtCenter Sponsored Studio",year:"2026",img:IMG.c_24h,page:"case-h24",vid:"h_all.mp4",poster:IMG.pf1},
+ {id:"kami",name:"Kami",desc:"An AI co-pilot for product designers. Research, wireframes, hi‑fi screens and restyling happen in one conversation on one canvas, instead of across 16 different tools.",ctx:"AI product · Team of 3",year:"2025",img:IMG.c_kami,page:"case-kami",vid:VID.research},
+ {id:"ath",name:"Aether",desc:"AR rehab games for stroke patients in hospital rehab rooms. Reaching, gripping and stepping become short missions, with a score and progress staff can review after each session.",ctx:"AR · Healthcare",year:"2024",img:"p/ath/cover.webp",page:"case-ath",vid:"p/ath/ath_vr.mp4",poster:"p/ath/cover.webp"}
 ];
 const VCFG={"w1-cluster": {"r": [[".pair", 0]], "a": [{"t": "PROGRESS", "w": 3200}, {"t": "COMPLETE", "w": 2600}, {"t": "ZERO", "w": 1600}], "ar": "1044/602"}, "w1-lens": {"r": [[".pair", 0]], "a": [], "ar": "1176/666"}, "w1-uplink": {"r": [[".pair", 0]], "a": [{"c": ["#run-uplink"], "w": 200}, {"c": ["#run-core"], "w": 5200}], "ar": "1184/578"}, "w2-bud-drip": {"r": [["button.hit", 0], ["button.hit", 3]], "a": [{"c": ["button.hit", 0]}, {"c": ["button.hit", 1]}, {"c": ["button.hit", 2]}, {"c": ["button.hit", 3], "w": 2200}, {"c": ["#bud-off"], "w": 1800}], "pad": [80, 110], "ar": "662/272"}, "w2-emote-chat": {"r": [["section.win", 1]], "a": [{"c": ["button.hit", 0]}, {"c": ["button.hit", 1]}, {"c": ["button.hit", 2]}, {"c": ["button.hit", 3], "w": 2200}, {"c": ["#all-off"], "w": 1800}], "ar": "922/308"}, "w2-lock-on": {"r": [["button.node", 0], ["button.node", 5]], "a": [{"c": ["button.node", 0], "w": 900}, {"c": ["button.node", 4], "w": 900}, {"c": ["button.node", 2], "w": 900}, {"c": ["#inc"], "w": 1500}, {"c": ["#clr"], "w": 1600}, {"c": ["#arm"], "w": 2400}, {"c": ["#clr"], "w": 1600}], "pad": [84, 30], "ar": "584/251"}, "w2-circled-noted": {"r": [["button.btn", 0], ["button.btn", 5]], "a": [{"c": ["button.btn", 0], "w": 1100}, {"c": ["button.btn", 4], "w": 1100}, {"c": ["button.btn", 2], "w": 1600}, {"c": ["#clr"], "w": 2200}, {"c": ["#arm"], "w": 2600}, {"c": ["#clr"], "w": 2200}], "pad": [100, 38], "ar": "624/293"}, "w2-seal-card": {"r": [["button.med", 0], ["button.med", 5]], "pad": [100, 64], "a": [{"c": ["button.med", 0], "w": 1100}, {"c": ["button.med", 4], "w": 1100}, {"c": ["button.med", 2], "w": 1600}, {"c": ["#clr"], "w": 2000}, {"c": ["#all"], "w": 2600}, {"c": ["#clr"], "w": 2000}], "ar": "613/401"}, "w3-lava": {"r": [["#sw-hero", 0]], "a": [{"c": ["#sw-hero"], "w": 2000}], "pad": [200, 120], "ar": "616/354"}, "w3-precision": {"r": [["#sw-hero", 0]], "a": [{"c": ["#sw-hero"], "w": 2000}], "pad": [200, 120], "ar": "562/338"}, "w3-ink": {"r": [["#cb-hero", 0]], "a": [{"c": ["#cb-hero"], "w": 2000}], "pad": [175, 95], "ar": "446/286"}, "w3-rally": {"r": [["#cb-hero", 0]], "a": [{"c": ["#cb-hero"], "w": 2000}], "pad": [200, 96], "ar": "538/330"}, "w4-elastic": {"r": [["section.card", 0]], "a": [{"d": [".hit", 0.18, 0.82], "w": 2200}, {"d": [".hit", 0.82, 0.4], "w": 2200}], "ar": "1102/598"}, "w4-lava": {"r": [["section.card", 0]], "a": [{"d": [".hit", 0.18, 0.82], "w": 2400}, {"d": [".hit", 0.82, 0.4], "w": 2400}], "ar": "1102/598"}, "w4-aurora": {"r": [["section.card", 0]], "a": [{"d": [".hit", 0.18, 0.82], "w": 2400}, {"d": [".hit", 0.82, 0.4], "w": 2400}], "ar": "1102/599"}};
 // Shared runtime: region rect + autoplay steps, run inside a document `d` / window `W`.
@@ -843,7 +847,7 @@ function caseAth(){return `<article class="cs ae">
   <p class="lead">An AR rehab game platform for stroke patients, used in hospitals with staff guiding every session.</p>
   <div class="meta"><div><span>My role</span>UX/UI design<br>Product design<br>Prototyping</div><div><span>Timeline</span>14 weeks<br>May – Aug 2024</div><div><span>Tools</span>Figma<br>Midjourney<br>Jimeng AI</div><div><span>Platform</span>AR headsets in the<br>hospital rehab room</div></div>
  </header>
- <div class="ae-shot"><img src="${AE}hero.webp" alt="A patient wearing an AR headset places cups on a virtual kitchen shelf, with a ranking panel and progress bar floating in the rehab room"></div>
+ <div class="ae-shot"><video src="p/ath/ath_vr.mp4" poster="${AE}cover.webp" autoplay muted loop playsinline data-auto controls aria-label="Aether in the headset: from the dashboard into Tidy the Shelf, placing cups on a virtual shelf"></video></div>
 
  <section class="ov sec" id="a-ov" data-id="a-ov">
   <div class="ov-top"><span>Overview</span><p>Stroke rehab only works if patients keep coming back, and most find the repeated exercises dull. Aether turns the same movements into short AR games, played in the hospital with staff nearby.</p></div>
@@ -870,6 +874,7 @@ function caseAth(){return `<article class="cs ae">
 
  <section class="sec" id="a-app" data-id="a-app" style="gap:0">
   <div class="blk-h"><div><span class="n">The product</span><h2>Inside Aether</h2></div><p>A session follows the hospital routine: check in, choose a game, play with a clear goal, then review the results with staff.</p></div>
+  <figure class="ae-in"><div class="ae-shot"><img src="${AE}hero.webp" alt="A patient wearing an AR headset places cups on a virtual kitchen shelf, with a ranking panel and progress bar floating in the rehab room"></div><figcaption>A patient plays Tidy the Shelf in the rehab room, with a therapist nearby.</figcaption></figure>
   <div class="ae-feats">
    ${aeFeat("01","Dashboard","Recently played games and the doctors on duty, so patients and staff can start in one tap.",null,[["s_dashboard","Dashboard"]])}
    ${aeFeat("02","Games by recovery goal","Every game is tagged by the body area it trains, the position and the level, so staff can match it to each patient’s plan.",["Upper limb","Balance &amp; lower limb","Cognitive / memory","Daily living"],[["s_category","All games, filtered by goal"],["s_preview","Game preview before launch"]])}
